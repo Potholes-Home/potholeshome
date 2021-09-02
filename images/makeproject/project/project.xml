@@ -20,24 +20,4 @@
         <name>anonymous</name>
         <user_friendly_name>anonymous</user_friendly_name>
     </platform>
-    <app>
-        <name>kaktwoos</name>
-        <user_friendly_name>Multichunk population seed cactus stacking</user_friendly_name>
-    </app>
-    <app>
-        <name>panorama</name>
-        <user_friendly_name>Main menu panorama seed scanning</user_friendly_name>
-    </app>
-    <app>
-        <name>kaktoos</name>
-        <user_friendly_name>Singlechunk population seed cactus stacking</user_friendly_name>
-    </app>
-    <app>
-        <name>packcrack</name>
-        <user_friendly_name>Triple-chunk sand-based terrain filtering</user_friendly_name>
-    </app>
-    <app>
-        <name>onechunk</name>
-        <user_friendly_name>SSG/One-Chunk/One-Block 1.7/1.8</user_friendly_name>
-    </app>
 </boinc>

@@ -5,7 +5,6 @@ volumes:
   project:
   results:
   secrets:
-  letsencrypt:
 
 services:
   traefik:
@@ -16,20 +15,14 @@ services:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
-      - "--entrypoints.websecure.address=:443"
-      - "--certificatesresolvers.le.acme.httpchallenge=true"
-      - "--certificatesresolvers.le.acme.httpchallenge.entrypoint=web"
-      - "--certificatesresolvers.le.acme.email=hello@chipwolf.uk"
-      - "--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json"
     ports:
       - "443:443"
       - "8080:8080"
     volumes:
-      - "letsencrypt:/letsencrypt"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
   mysql:
-    container_name: "mcath_mysql"
+    container_name: "phath_mysql"
     build: 
       context: images/mysql
     ports:
@@ -38,7 +31,7 @@ services:
       - "mysql:/var/lib/mysql"
 
   makeproject:
-    container_name: "mcath_mkproject"
+    container_name: "phath_mkproject"
     build: 
       context: images/makeproject
       args:
@@ -55,7 +48,7 @@ services:
       - PROJECT
 
   apache:
-    container_name: "mcath_boinc"
+    container_name: "phath_boinc"
     build: 
       context: images/apache
       args:
@@ -73,13 +66,6 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.middlewares.home.addprefix.prefix=/minecrafthome"
-      - "traefik.http.routers.home.entrypoints=websecure"
-      - "traefik.http.routers.home.rule=(PathPrefix(`/`) && Host(`minecraftathome.com`))"
-      - "traefik.http.routers.home.middlewares=home@docker"
-      - "traefik.http.routers.home.tls.certresolver=le"
-      - "traefik.http.routers.local.entrypoints=websecure"
-      - "traefik.http.routers.local.rule=(PathPrefix(`/minecrafthome`) && Host(`minecraftathome.com`))"
-      - "traefik.http.routers.local.tls.certresolver=le"
     tty: true
     environment:
       - URL_BASE

@@ -1,3 +1,3 @@
 <?php
-print('<div><p>This is a volunteer computing project which allows anyone on the internet to contribute resources to research projects related to Minecraft.<br><br>Minecraft@Home enables the study of the fundemental laws of Minecraft to answer unanswered questions regarding the features and true limits of the game.<br></p><center style="padding-bottom: 5px;"><a href="/projects" class="btn btn-info"><font size="+2">View our projects</font></a></center></div>');
+print('<div><p>This is a volunteer computing project which allows anyone on the internet to contribute resources to analyze the quality of streets across the world.<br><br>Potholes@Home enables the study of classifying the quality of streets.<br></p><center style="padding-bottom: 5px;"><a href="/projects" class="btn btn-info"><font size="+2">View our projects</font></a></center></div>');
 ?>

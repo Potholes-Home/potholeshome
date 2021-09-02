@@ -12,7 +12,7 @@ require_once("../inc/util.inc");
 
 //-------------- Project name and owner
 
-define("PROJECT", "Minecraft@Home");
+define("PROJECT", "Potholes@Home");
 define("COPYRIGHT_HOLDER", "");
 
 //-------------- URLs and directories
@@ -33,21 +33,14 @@ define("GLOBAL_HEAD_EXTRA", '<link rel="apple-touch-icon" sizes="180x180" href="
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#212121">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171049199-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-
-  gtag("config", "UA-171049199-1");
-</script>');
+');
 
 //-------------- contact info
 
-define("SYS_ADMIN_EMAIL", "boinc@hrznstudio.com");
-define("UOTD_ADMIN_EMAIL", "boinc@hrznstudio.com");
+define("SYS_ADMIN_EMAIL", "boinc@nordgedanken.dev");
+define("UOTD_ADMIN_EMAIL", "boinc@nordgedanken.dev");
     // who gets emails about user of the day pool running low?
-define("POST_REPORT_EMAILS", "boinc@hrznstudio.com");
+define("POST_REPORT_EMAILS", "boinc@nordgedanken.dev");
     // Email addresses separated by pipe ( | ) that will receive user reports
     // of offensive forum posts.
 
@@ -113,12 +106,12 @@ function make_php_mailer() {
     //$mail->Mailer = 'smtp';
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = "tls";
-    $mail->Host = "smtp.sendgrid.net";
+    $mail->Host = "mail.nordgedanken.dev";
     $mail->Port = 587;
-    $mail->Username = "apikey";
+    $mail->Username = "boinc";
     $mail->Password = "${MAILPASS}";
-    $mail->SetFrom('no-reply@minecraftathome.com', 'Minecraft@Home');
-    $mail->From = "boinc@em9920.minecraftathome.com";
+    $mail->SetFrom('no-reply@nordgedanken.dev', 'Potholes@Home');
+    $mail->From = "boinc@nordgedanken.dev";
     return $mail;
 }
 

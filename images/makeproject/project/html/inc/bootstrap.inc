@@ -157,8 +157,8 @@ function sample_navbar(
         $x[] = array(tra("Join"), $url_prefix."join.php");
         $x[] = array(tra("Preferences"), $url_prefix."prefs.php?subset=project");
     }
-    $x[] = array(tra("Discord"), "https://discord.gg/FVM4SPp");
-    $x[] = array(tra("GitHub"), "https://github.com/minecrafthome");
+    //$x[] = array(tra("Discord"), "https://discord.gg/FVM4SPp");
+    $x[] = array(tra("GitHub"), "https://github.com/potholeshome");
     navbar_menu(tra("Project"), $x);
 
     if (NO_COMPUTING) {

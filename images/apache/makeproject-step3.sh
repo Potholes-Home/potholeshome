@@ -20,14 +20,14 @@ do
 
     # add a new url since the python script doesnt allow custom url except with the awful cgi-bin
     # https://github.com/BOINC/boinc/blob/master/tools/make_project#L351
-    perl -i -p0e 's#Alias /minecrafthome /home/boincadm/project/html/user#Alias /minecrafthome/projects /home/boincadm/project/html/new\n    Alias /minecrafthome /home/boincadm/project/html/user#s' minecrafthome.httpd.conf
-    perl -i -p0e 's#Alias /minecrafthome /home/boincadm/project/html/user#Alias /projects /home/boincadm/project/html/new\n    Alias /minecrafthome /home/boincadm/project/html/user#s' minecrafthome.httpd.conf
-    perl -i -p0e 's#Alias /minecrafthome /home/boincadm/project/html/user#Redirect "/minecrafthome/projects.html" "/projects/list.html"\n    Alias /minecrafthome /home/boincadm/project/html/user#s' minecrafthome.httpd.conf
-    perl -i -p0e 's#Alias /minecrafthome /home/boincadm/project/html/user#Redirect "/minecrafthome/all" "/projects/list.html"\n    Alias /minecrafthome /home/boincadm/project/html/user#s' minecrafthome.httpd.conf
-    perl -i -p0e 's#Alias /minecrafthome /home/boincadm/project/html/user#Redirect "/minecrafthome/herobrine.html" "/projects/herobrine.html"\n    Alias /minecrafthome /home/boincadm/project/html/user#s' minecrafthome.httpd.conf
-    perl -i -p0e 's#Alias /minecrafthome /home/boincadm/project/html/user#Redirect "/minecrafthome/herobrine" "/projects/herobrine.html"\n    Alias /minecrafthome /home/boincadm/project/html/user#s' minecrafthome.httpd.conf
-    perl -i -p0e 's#Alias /minecrafthome /home/boincadm/project/html/user#Redirect "/minecrafthome/markiplier" "/projects/markiplier.html"\n    Alias /minecrafthome /home/boincadm/project/html/user#s' minecrafthome.httpd.conf
-    perl -i -p0e 's#Alias /minecrafthome /home/boincadm/project/html/user#Redirect "/minecrafthome/markiplier.html" "/projects/markiplier.html"\n    Alias /minecrafthome /home/boincadm/project/html/user#s' minecrafthome.httpd.conf
+    perl -i -p0e 's#Alias /potholeshome /home/boincadm/project/html/user#Alias /potholeshome/projects /home/boincadm/project/html/new\n    Alias /potholeshome /home/boincadm/project/html/user#s' potholeshome.httpd.conf
+    perl -i -p0e 's#Alias /potholeshome /home/boincadm/project/html/user#Alias /projects /home/boincadm/project/html/new\n    Alias /potholeshome /home/boincadm/project/html/user#s' potholeshome.httpd.conf
+    perl -i -p0e 's#Alias /potholeshome /home/boincadm/project/html/user#Redirect "/potholeshome/projects.html" "/projects/list.html"\n    Alias /potholeshome /home/boincadm/project/html/user#s' potholeshome.httpd.conf
+    perl -i -p0e 's#Alias /potholeshome /home/boincadm/project/html/user#Redirect "/potholeshome/all" "/projects/list.html"\n    Alias /potholeshome /home/boincadm/project/html/user#s' potholeshome.httpd.conf
+    perl -i -p0e 's#Alias /potholeshome /home/boincadm/project/html/user#Redirect "/potholeshome/herobrine.html" "/projects/herobrine.html"\n    Alias /potholeshome /home/boincadm/project/html/user#s' potholeshome.httpd.conf
+    perl -i -p0e 's#Alias /potholeshome /home/boincadm/project/html/user#Redirect "/potholeshome/herobrine" "/projects/herobrine.html"\n    Alias /potholeshome /home/boincadm/project/html/user#s' potholeshome.httpd.conf
+    perl -i -p0e 's#Alias /potholeshome /home/boincadm/project/html/user#Redirect "/potholeshome/markiplier" "/projects/markiplier.html"\n    Alias /potholeshome /home/boincadm/project/html/user#s' potholeshome.httpd.conf
+    perl -i -p0e 's#Alias /potholeshome /home/boincadm/project/html/user#Redirect "/potholeshome/markiplier.html" "/projects/markiplier.html"\n    Alias /potholeshome /home/boincadm/project/html/user#s' potholeshome.httpd.conf
   
     ln -sf ${PROJECT_ROOT}/${PROJECT}.httpd.conf /etc/apache2/sites-enabled/
 
