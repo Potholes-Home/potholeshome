@@ -132,7 +132,7 @@ function left(){
                     );
                 }
             }
-            echo '<center><hr style="border-top: 5px solid #c8c8c8;"><iframe src="https://discordapp.com/widget?id=720723932738486323&amp;theme=dark" width="350" height="350" allowtransparency="true" frameborder="0" style="margin-top:1%"></iframe></center>';
+//            echo '<center><hr style="border-top: 5px solid #c8c8c8;"><iframe src="https://discordapp.com/widget?id=720723932738486323&amp;theme=dark" width="350" height="350" allowtransparency="true" frameborder="0" style="margin-top:1%"></iframe></center>';
         }
     );
     global $stopped;
