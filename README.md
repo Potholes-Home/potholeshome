@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/potholeshome/branding/master/social/github-readme.png)
 
-Pothiles@Home BOINC
+Potholes@Home BOINC
 ====================
 
 ## Volunteer your compute resources
